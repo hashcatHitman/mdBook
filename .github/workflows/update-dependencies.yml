@@ -2,9 +2,15 @@ name: Update dependencies
 on:
   schedule:
     - cron: '0 0 1 * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
 
-permissions: {}
+permissions: write-all
 
 jobs:
   update:
@@ -12,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'rust-lang/mdBook'
     steps:
+      - uses: GitHubSecurityLab/actions-permissions/monitor@bf82d13b9b10051d224345ab9184f5ede0a94289 # v1.0.2-beta9
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
           persist-credentials: false
