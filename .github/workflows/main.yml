@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - zizmor
   pull_request:
     branches:
       - main
+      - zizmor
   workflow_dispatch: {}
 
 permissions: write-all
