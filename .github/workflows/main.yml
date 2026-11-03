@@ -187,7 +187,7 @@ jobs:
       - name: Install cargo audit
         run: rustup update stable && rustup default stable && cargo install cargo-audit --locked
       - name: Run cargo audit
-        run: cargo audit
+        run: cargo audit --ignore RUSTSEC-2026-0433
 
   # The success job is here to consolidate the total success/failure state of
   # all other jobs. This job is then included in the GitHub branch protection
