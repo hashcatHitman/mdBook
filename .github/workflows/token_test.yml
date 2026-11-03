@@ -24,6 +24,15 @@ jobs:
           persist-credentials: false
       - run: cat ./.git/config
       - run: ls ~
+  pre-6-no-persist-manual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - run: git config remote.origin.url "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+      - run: cat ./.git/config
+      - run: ls ~
   pre-6-persist:
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +42,15 @@ jobs:
       - run: cat ./.git/config
       - run: ls ~
   post-6-no-persist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - run: git config remote.origin.url "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+      - run: cat ./.git/config
+      - run: ls ~
+  post-6-no-persist-manual:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
@@ -48,3 +66,6 @@ jobs:
           persist-credentials: true
       - run: cat ./.git/config
       - run: ls ~
+
+
+
