@@ -27,18 +27,18 @@ rust-version = "1.88.0" # Keep in sync with installation.md and .github/workflow
 [workspace.dependencies]
 anyhow = "1.0.104"
 axum = "0.8.9"
-clap = { version = "4.6.5", features = ["cargo", "wrap_help"] }
-clap_complete = "4.6.8"
-ego-tree = "0.11.0"
+clap = { version = "4.6.7", features = ["cargo", "wrap_help"] }
+clap_complete = "4.6.11"
+ego-tree = "0.11.1"
 elasticlunr-rs = "3.1.0"
 font-awesome-as-a-crate = "0.3.1"
-futures-util = "0.3.33"
+futures-util = "0.3.34"
 glob = "0.3.4"
-handlebars = "6.4.3"
+handlebars = "6.4.4"
 hex = "0.4.3"
 html5ever = "0.39.0"
-indexmap = "2.14.0"
-ignore = "0.4.31"
+indexmap = "2.14.2"
+ignore = "0.4.34"
 mdbook-core = { path = "crates/mdbook-core", version = "0.5.4" }
 mdbook-driver = { path = "crates/mdbook-driver", version = "0.5.4" }
 mdbook-html = { path = "crates/mdbook-html", version = "0.5.4" }
@@ -47,24 +47,24 @@ mdbook-preprocessor = { path = "crates/mdbook-preprocessor", version = "0.5.4" }
 mdbook-renderer = { path = "crates/mdbook-renderer", version = "0.5.4" }
 mdbook-summary = { path = "crates/mdbook-summary", version = "0.5.4" }
 memchr = "2.8.3"
-notify = "8.2.0"
+notify = "8.2.1"
 notify-debouncer-mini = "0.7.0"
 opener = "0.8.5"
 pathdiff = "0.2.3"
-pulldown-cmark = { version = "0.13.5", default-features = false, features = ["html"] } # Do not update, part of the public api.
+pulldown-cmark = { version = "0.13.6", default-features = false, features = ["html"] } # Do not update, part of the public api.
 regex = "1.13.1"
 select = "0.6.1"
 semver = "1.0.28"
 serde = { version = "1.0.229", features = ["derive"] }
-serde_json = "1.0.151"
-sha2 = "0.11.0"
+serde_json = "1.0.154"
+sha2 = "0.11.1"
 shlex = "2.0.1"
 snapbox = "1.2.2"
 tempfile = "3.27.0"
-tokio = "1.53.3"
-toml = "1.1.4"
-topological-sort = "0.3.0"
-tower-http = "0.7.0"
+tokio = "1.54.1"
+toml = "1.2.0"
+topological-sort = "0.3.1"
+tower-http = "0.7.1"
 tracing = "0.1.44"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
 walkdir = "2.5.0"
