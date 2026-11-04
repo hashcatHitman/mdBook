@@ -27,7 +27,7 @@ function publish {
             ;;
     esac
 
-    cargo publish --manifest-path $manifest --no-verify
+    cargo publish --manifest-path $manifest --no-verify --dry-run
 }
 
 publish mdbook-core crates/mdbook-core/Cargo.toml
