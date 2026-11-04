@@ -16,7 +16,7 @@ defaults:
   run:
     shell: bash
 
-permissions: write-all
+permissions: {}
 
 jobs:
   release:

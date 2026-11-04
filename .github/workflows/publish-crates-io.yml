@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Required for OIDC token exchange
+      contents: write # TODO: Is this actually required? What for?
     environment: publish
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
