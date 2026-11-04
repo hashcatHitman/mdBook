@@ -20,6 +20,8 @@ permissions: {}
 
 jobs:
   release:
+    permissions:
+      contents: write # Required by `gh release upload`
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
